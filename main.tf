@@ -6,7 +6,7 @@ variable "run_id" {
   sensitive = true
 }
 
-resource "null_resource" "wait" {
+resource "null_resource" "wait2" {
   triggers = {
     run_id = var.run_id
   }
