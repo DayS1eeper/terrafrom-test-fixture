@@ -6,7 +6,7 @@ import input.tfplan as tfplan
 
 # Blacklisted Terraform providers
 not_allowed_provider = [
-  "null"
+  "azuread"
 ]
 
 
