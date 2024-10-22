@@ -10,5 +10,5 @@ get_basename(path) = basename{
 }
 
 greater_than_zero(x) {
-  x > 2
+  x > 0
 }
