@@ -9,3 +9,6 @@ get_basename(path) = basename{
     basename:= arr[count(arr)-1]
 }
 
+greater_than_zero(x) {
+  x > 0
+}

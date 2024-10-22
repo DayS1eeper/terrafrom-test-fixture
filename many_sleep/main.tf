@@ -1,25 +1,17 @@
 variable "sleep_time" {
-  default = 1
+  default = 60
 }
 variable "run_id" {
   default = "run-abc"
   sensitive = true
 }
 
-resource "null_resource" "wait2" {
+resource "null_resource" "wait"{
+  count = 110
   triggers = {
     run_id = var.run_id
   }
   provisioner "local-exec" {
     command = "sleep ${var.sleep_time}"
   }
-}
-
-resource "terraform_data" "this" {
-  input = var.check
-}
-
-variable "check" {
-  type = number
-  default = 1
 }
